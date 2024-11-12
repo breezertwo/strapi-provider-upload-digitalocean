@@ -32,7 +32,7 @@ module.exports = ({env}) => ({
   // ...
   upload: {
     config: {
-      provider: "strapi-provider-upload-do", 
+      provider: "strapi-provider-upload-digitalocean",
       providerOptions: {
         key: env('DO_SPACE_ACCESS_KEY'),
         secret: env('DO_SPACE_SECRET_KEY'),
@@ -42,7 +42,7 @@ module.exports = ({env}) => ({
         cdn: env('DO_SPACE_CDN'),
       }
     },
-  }, 
+  },
   // ...
 })
 
