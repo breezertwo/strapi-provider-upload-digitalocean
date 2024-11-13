@@ -1,8 +1,8 @@
 {
-  "name": "strapi-provider-upload-digitalocean",
+  "name": "@breezertwo/strapi-provider-upload-digitalocean",
   "version": "5.0.0",
   "description": "Digital ocean spaces provider for Strapi asset upload",
-  "homepage": "http://strapi.io",
+  "homepage": "https://github.com/breezertwo",
   "keywords": [
     "upload",
     "digitalocean",
@@ -11,7 +11,7 @@
     "provider"
   ],
   "directories": {
-    "lib": "./lib"
+    "lib": "lib"
   },
   "main": "./lib",
   "dependencies": {
@@ -21,10 +21,7 @@
   "strapi": {
     "isProvider": true
   },
-  "author": {
-    "email": "andreas@heynanny.com",
-    "name": "Andreas Brechtel"
-  },
+  "author": "Andreas Brechtel <andreas@heynanny.com>",
   "repository": {
     "type": "git",
     "url": "git://github.com/breezertwo/strapi-provider-upload-digitalocean.git"

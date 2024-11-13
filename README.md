@@ -2,6 +2,7 @@
 - This provider is a fork of [AdamZikmund's](https://github.com/AdamZikmund) [strapi upload provider](https://github.com/AdamZikmund/strapi-provider-upload-digitalocean) for Digital Ocean spaces.
 
 This provider will upload to the space using the AWS S3 API.
+Strapi v5 ready and AWS Client SDK v3.
 
 ## Parameters
 - **key** : [Space access key](https://cloud.digitalocean.com/account/api/tokens)
@@ -16,22 +17,23 @@ This provider will upload to the space using the AWS S3 API.
 ### 1. Install this package
 
 ```bash
-npm i strapi-provider-upload-digitalocean
+npm i @breezertwo/strapi-provider-upload-digitalocean
 ```
 
-### 2. Create or update config in `./config/plugins.js` with content
+### 2. Create or update config in `./config/plugins.js` of your strapi project
 
 ```js
 module.exports = ({env}) => ({
   // ...
   upload: {
     config: {
-      provider: "strapi-provider-upload-digitalocean",
+      provider: "@breezertwo/strapi-provider-upload-digitalocean",
       providerOptions: {
         key: env('DO_SPACE_ACCESS_KEY'),
         secret: env('DO_SPACE_SECRET_KEY'),
         endpoint: env('DO_SPACE_ENDPOINT'),
         space: env('DO_SPACE_BUCKET'),
+        region: env('DO_SPACE_REGION'),
         directory: env('DO_SPACE_DIRECTORY'),
         cdn: env('DO_SPACE_CDN'),
       }
@@ -42,13 +44,14 @@ module.exports = ({env}) => ({
 
 ```
 
-### 3. Create `.env` and add provide Digital Ocean config.
+### 3. Create or modify `.env` and add Digital Ocean env variables.
 
 ```bash
 DO_SPACE_ACCESS_KEY=
 DO_SPACE_SECRET_KEY=
 DO_SPACE_ENDPOINT=
 DO_SPACE_BUCKET=
+DO_SPACE_REGION=     #Optional (defaults to fra1)
 DO_SPACE_DIRECTORY=  #Optional
 DO_SPACE_CDN=        #Optional
 ```
