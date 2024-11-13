@@ -1,7 +1,7 @@
 {
   "name": "strapi-provider-upload-digitalocean",
   "version": "5.0.0",
-  "description": "Digital ocean spaces provider for Strapi upload plugin",
+  "description": "Digital ocean spaces provider for Strapi asset upload",
   "homepage": "http://strapi.io",
   "keywords": [
     "upload",
@@ -33,8 +33,8 @@
     "url": "https://github.com/breezertwo/strapi-provider-upload-digitalocean/issues"
   },
   "engines": {
-    "node": ">= 10.0.0",
-    "npm": ">= 6.0.0"
+    "node": ">= 18.0.0",
+    "npm": ">= 9.0.0"
   },
   "license": "MIT"
 }
